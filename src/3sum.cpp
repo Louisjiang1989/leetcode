@@ -140,7 +140,7 @@ int main()
         printf("\n");
     }
     printf("\n");
-    int result = test.threeSumClosestOn2(vec, 0);
+    int result = test.threeSumClosestOn2(vec, -5);
     printf("result: %d\n", result);
     return 0;
 }
