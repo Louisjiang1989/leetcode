@@ -38,10 +38,12 @@ class FindMin
                     // min is in the [mid, stop]
                     start = mid;
                     mid = (start + stop) / 2;
-                } else {
+                } else if (vec[mid] < vec[start]){
                     // min is in the [start, mid]
                     stop = mid;
                     mid = (start + stop) / 2;
+                } else {
+                    start++;
                 }
             }
             return min(vec[start], vec[stop]);
@@ -50,8 +52,8 @@ class FindMin
 
 int main()
 {
-    int array[7] = {4, 5, 6, 7, -1, 1, 2};
-    vector<int> vec(array, array+7);
+    int array[8] = {4, 5, 6, 7, -1, -1, 1, 2};
+    vector<int> vec(array, array+8);
     FindMin test;
     int min;
     min = test.findMinBinarySearch(vec);
